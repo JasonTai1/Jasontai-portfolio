@@ -1,0 +1,87 @@
+.loader {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  background: #171717;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-inner {
+  width: min(700px, 85%);
+}
+
+.loader-top,
+.loader-footer {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.loader-center {
+  margin: 70px 0;
+}
+
+.loader-title {
+  font-family: 'Space Grotesk';
+
+  font-size: clamp(75px, 16vw, 120px);
+
+  font-weight: 600;
+  letter-spacing: -10px;
+
+  background: linear-gradient(
+    110deg,
+    #666,
+    #fff,
+    #aaa,
+    #fff,
+    #666
+  );
+
+  background-size: 200%;
+
+  color: transparent;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: silver-shine 2.5s linear infinite;
+}
+
+.loader-title span {
+  color: white;
+}
+
+.loader-center p {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #888;
+}
+
+.loader-progress {
+  width: 100%;
+  height: 2px;
+
+  background: #333;
+  margin-top: 18px;
+}
+
+.loader-progress-bar {
+  width: 0;
+  height: 100%;
+  background: white;
+}
+
+@keyframes silver-shine {
+  to {
+    background-position: 200%;
+  }
+}

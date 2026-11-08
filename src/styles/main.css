@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+
+  background: #171717;
+  color: #f2f2f2;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --background: #171717;
+  --surface: #202020;
+  --white: #f2f2f2;
+  --silver: #999999;
+  --border: #ffffff20;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  height: 95px;
+
+  padding: 0 8%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid var(--border);
+
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-logo {
+  font-family: 'Space Grotesk';
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.navbar-logo span {
+  color: #999;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 45px;
+}
+
+.navbar-links a,
+.navbar-contact {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #999;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover,
+.navbar-contact:hover {
+  color: white;
+}
+
+.navbar-contact span {
+  margin-left: 10px;
+}
+
+.hero {
+  min-height: 800px;
+  height: calc(100svh - 95px);
+  max-height: 1050px;
+
+  padding: 65px 8% 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+
+  background:
+    radial-gradient(
+      ellipse at 75% 45%,
+      #ffffff0b,
+      transparent 55%
+    );
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-intro {
+  color: #999;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 35px;
+}
+
+.hero-title {
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: clamp(75px, 11.5vw, 165px);
+
+  font-weight: 600;
+  letter-spacing: -10px;
+  line-height: 0.9;
+}
+
+.hero-title span {
+  display: inline-block;
+}
+
+.hero-title .outline {
+  color: transparent;
+  -webkit-text-stroke: 1px #aaa;
+}
+
+.hero-bottom {
+  margin-top: 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.hero-bottom p {
+  max-width: 360px;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: #999;
+}
+
+.hero-button {
+  border: 1px solid #666;
+
+  padding: 20px 28px;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+
+  transition: 0.35s;
+}
+
+.hero-button:hover {
+  background: white;
+  color: black;
+}
+
+.hero-button span {
+  margin-left: 20px;
+}
+
+.hero-scroll {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.section {
+  padding: 150px 8%;
+  border-top: 1px solid var(--border);
+}
+
+.section-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+.section h2 {
+  font-family: 'Space Grotesk';
+
+  font-size: clamp(45px, 7vw, 100px);
+
+  letter-spacing: -5px;
+  line-height: 1.1;
+
+  margin: 65px 0;
+}
+
+.section h2 span {
+  color: #777;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  align-items: end;
+  gap: 50px;
+}
+
+.about-content h2 {
+  margin-bottom: 0;
+}
+
+.about-content p {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.9;
+  padding-bottom: 10px;
+}
+
+.project-card {
+  padding: 50px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 50px;
+
+  transition: padding 0.4s;
+}
+
+.project-card:hover {
+  padding-left: 20px;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.project-card h3 {
+  font-family: 'Space Grotesk';
+  font-size: clamp(45px, 8vw, 100px);
+  margin: 35px 0 10px;
+}
+
+.project-card h3 span {
+  font-size: 25px;
+  color: #888;
+  margin-left: 15px;
+}
+
+.project-card p {
+  color: #999;
+  margin-bottom: 25px;
+}
+
+.project-tech {
+  color: #777;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills-list span {
+  padding: 20px 30px;
+  border: 1px solid #ffffff30;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  color: #bbb;
+
+  transition: 0.3s;
+}
+
+.skills-list span:hover {
+  background: white;
+  color: black;
+  transform: translateY(-5px);
+}
+
+.contact {
+  min-height: 600px;
+}
+
+.contact h2 {
+  font-size: clamp(60px, 10vw, 130px);
+}
+
+.contact > a {
+  display: inline-block;
+  border-bottom: 1px solid white;
+  padding-bottom: 12px;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+footer {
+  padding: 40px 8%;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid var(--border);
+
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+.cursor-glow {
+  position: fixed;
+
+  width: 400px;
+  height: 400px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+  z-index: 0;
+
+  background: radial-gradient(
+    circle,
+    #ffffff0a,
+    transparent 70%
+  );
+
+  transform: translate(-50%, -50%);
+}
+
+
+/*CUSTOM CURSOR */
+
+/* =================================
+   PREMIUM SILVER CURSOR
+================================= */
+
+@media (pointer: fine) {
+
+  body,
+  a,
+  button {
+    cursor: none;
+  }
+
+  /* Main cursor */
+
+  .custom-cursor {
+    position: fixed;
+
+    width: 9px;
+    height: 9px;
+
+    background: #f5f5f5;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 10000;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 15px #ffffff50;
+
+    transition:
+      width 0.35s ease,
+      height 0.35s ease,
+      background 0.35s ease,
+      border 0.35s ease;
+  }
+
+  /* Hover interaction */
+
+  .custom-cursor.cursor-active {
+    width: 85px;
+    height: 85px;
+
+    background: #e8e8e8;
+
+    box-shadow: 0 0 30px #ffffff25;
+  }
+
+  .cursor-label {
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    color: #171717;
+
+    opacity: 0;
+
+    white-space: nowrap;
+
+    transition: opacity 0.25s ease;
+  }
+
+  .cursor-active .cursor-label {
+    opacity: 1;
+  }
+
+  /* Silver particles */
+
+  .cursor-particle {
+    position: fixed;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #eeeeee;
+
+    pointer-events: none;
+
+    z-index: 9998;
+
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0 0 8px #ffffff80;
+  }
+
+}
